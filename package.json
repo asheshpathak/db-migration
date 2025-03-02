@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "workspaces": {
-    "packages":[
+    "packages": [
       "apps/*",
       "packages/*"
     ]
@@ -17,7 +17,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@types/node": "^20.11.19",
+    "@types/node": "^20.17.22",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.1",
     "eslint": "^8.56.0",
@@ -45,6 +45,8 @@
       "prettier --write"
     ]
   },
-  "resolutions": {    "react": "^18.2.0",
-  "react-dom": "^18.2.0"}
+  "resolutions": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }

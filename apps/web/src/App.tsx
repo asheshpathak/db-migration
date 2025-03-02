@@ -1,11 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from '@components/layout/Layout';
-import SchemaPage from '@pages/SchemaPage';
-import MigrationPage from '@pages/MigrationPage';
-import HistoryPage from '@pages/HistoryPage';
-import ComparisonPage from '@pages/ComparisonPage';
-import AnalyticsPage from '@pages/AnalyticsPage';
+import { SchemaPage, MigrationPage, HistoryPage, ComparisonPage, AnalyticsPage } from '@pages';
 import { EnvironmentProvider } from '@contexts/EnvironmentContext';
 
 const App: React.FC = () => {

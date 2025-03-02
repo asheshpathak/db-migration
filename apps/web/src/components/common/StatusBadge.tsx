@@ -9,48 +9,44 @@ interface StatusBadgeProps {
   className?: string;
 }
 
-const StatusBadge: React.FC<StatusBadgeProps> = ({ 
-  status, 
-  label,
-  className 
-}) => {
+const StatusBadge: React.FC<StatusBadgeProps> = ({ status, label, className }) => {
   const getStatusProps = () => {
     switch (status) {
       case 'synced':
         return {
           variant: 'success' as const,
-          defaultLabel: 'Synced'
+          defaultLabel: 'Synced',
         };
       case 'changes':
         return {
           variant: 'warning' as const,
-          defaultLabel: 'Changes Detected'
+          defaultLabel: 'Changes Detected',
         };
       case 'pending':
         return {
           variant: 'info' as const,
-          defaultLabel: 'Pending'
+          defaultLabel: 'Pending',
         };
       case 'complete':
         return {
           variant: 'success' as const,
-          defaultLabel: 'Complete'
+          defaultLabel: 'Complete',
         };
       case 'error':
         return {
           variant: 'destructive' as const,
-          defaultLabel: 'Error'
+          defaultLabel: 'Error',
         };
       default:
         return {
           variant: 'secondary' as const,
-          defaultLabel: 'Unknown'
+          defaultLabel: 'Unknown',
         };
     }
   };
 
   const { variant, defaultLabel } = getStatusProps();
-  
+
   return (
     <Badge variant={variant} className={className}>
       {label || defaultLabel}
